@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal 4 - Jadwal Pak Hassan</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p style="text-align: center">Running function "CEKJADWAL(x,y)" di console</p>
+    <script>
+        const CEKJADWAL = (x, y) => {
+            let nilaiMax = x * y;
+            let modX, modY;
+            for(i = 1; i <= nilaiMax; i++){ //looping dari 1 hingg perkalian x dan y
+                modX = i % x;
+                modY = i % y;
+                if(modX === 0 && modY === 0){ //jika I modulo x dan y = 0 maka return I
+                    return i;
+                }
+            }
+        }
+
+        console.log('Contoh: CEKJADWAL(5,7);');
+        console.log(CEKJADWAL(5,7));
+    </script>
+</body>
+</html>

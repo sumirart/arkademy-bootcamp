@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal 3 - Cetak Bilangan Prima</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p style="text-align: center">Running function "PRIMA(x,y)" di console</p>
+    <script>
+        // fungsi cetak baris dan kolom
+        const PRIMA = (x, y) => {
+            let nomor = 2;
+            let teks = '';
+
+            for (i = 0; i < y; i++) {
+                for (j = 0; j < x; j++) {
+                    if (CEKPRIMA(nomor)) {
+                        teks += nomor + ','; //jika true maka dimasukan ke text
+                    } else {
+                        j--; //jika false maka j dikurangi sehingga menambah loop
+                    }
+                    nomor++;
+                }
+                console.log(teks); //print out text per baris lalu reset untuk baris berikutnya
+                teks = '';
+            }
+
+        }
+
+        const CEKPRIMA = (nomor) => {
+            if (nomor === 1) {
+                return false;
+            }
+            else if (nomor === 2) {
+                return true;
+            } else {
+                for (x = 2; x < nomor; x++) {
+                    // looping dari 2 hingga n-1 untuk mencari modulo = 0
+                    if (nomor % x === 0) {
+                        return false; //jika ternyata didapati maka langsung return false
+                    }
+                }
+                return true; // jika tidak maka exit loop dan return true
+            }
+        }
+
+        console.log('Contoh: PRIMA(4,5);');
+        PRIMA(4,5);
+    </script>
+</body>
+</html>

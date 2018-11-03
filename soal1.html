@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal 1 - Return JSON</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p style="text-align: center">Running function "RETURN_JSON" di console dengan object ITEM</p>
+    <script>
+        const ITEM = {
+                itemId: '12341822',
+                itemName: 'desk',
+                price: 700000,
+                ratings: [
+                    { rater: 'akmal', score: 4 },
+                    { rater: 'andi', score: 5 }
+                ],
+                freeShiping: true,
+                color: ['brown', 'black']
+            };
+
+        const RETURN_JSON = () => {
+            return JSON.stringify(ITEM);
+        };
+        console.log(RETURN_JSON());
+    </script>
+</body>
+</html>

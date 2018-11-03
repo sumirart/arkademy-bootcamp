@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Soal 5 - Mencari Banyaknya Karakter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <p style="text-align: center">Running function "HITUNGCHAR(x,y)" di console</p>
+    <script>
+        console.log("Mencari karakter huruf besar maupun huruf kecil.")
+        const HITUNGCHAR = (x, y) => {
+            let jumlah = 0;
+            let arr = x.split(""); //split string ke array
+            let z = y.toUpperCase();
+
+            arr.forEach(element => {
+                if(element == y || element == z){
+                    jumlah++;
+                }
+            });
+            return jumlah;
+        }
+
+        console.log('Contoh: HITUNGCHAR("Andra","a")');
+        console.log(HITUNGCHAR("Andra", "a"));
+    </script>
+</body>
+</html>
