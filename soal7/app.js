@@ -31,7 +31,7 @@ app.use('/assets', express.static(__dirname + '/public'));
 
 //route untuk homepage
 app.get('/', (req, res) => {
-    let sql = "SELECT * FROM products";
+    let sql = "SELECT products.id, products.name, product_categories.name FROM `products` INNER JOIN `product_categories` ON products.category_id = product_categories.id";
     let query = conn.query(sql, (err, results) => {
         if (err) throw err;
         res.render('product_view', {
