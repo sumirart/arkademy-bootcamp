@@ -31,27 +31,6 @@
 
     <script src="/assets/js/jquery-3.3.1.js"></script>
     <script src="/assets/js/bootstrap.js"></script>
-    <script>
-        $(document).ready(function () {
-            //tampilkan data ke modal untuk edit
-            $('#mytable').on('click', '.edit', function () {
-                var products.id = $(this).data('id');
-                var products.name = $(this).data('products.name');
-                var product_categories.name= $(this).data('product_price');
-                $('#EditModal').modal('show');
-                $('.products.name').val(products.name);
-                $('.price').val(product_price);
-                $('.products.id').val(products.id);
-            });
-            //tampilkan modal hapus record
-            $('#mytable').on('click', '.delete', function () {
-                var products.id = $(this).data('id');
-                $('#DeleteModal').modal('show');
-                $('.products.id2').val(products.id);
-            });
-
-        });
-    </script>
 </body>
 
 </html>
